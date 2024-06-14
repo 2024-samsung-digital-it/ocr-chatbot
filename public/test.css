@@ -1,0 +1,26 @@
+/* custom_styles.css */
+
+/* 기본 텍스트 색상 */
+body, .MuiTypography-root {
+    color: #000000; /* 검은색 텍스트 */
+}
+
+/* 링크 텍스트 색상 */
+a {
+    color: #1a73e8; /* 파란색 링크 텍스트 */
+}
+
+/* 카드나 패널 내 텍스트 색상 */
+.MuiPaper-root {
+    color: #ffffff; /* 흰색 텍스트 */
+}
+
+/* 버튼 텍스트 색상 */
+.MuiButton-root {
+    color: #ffffff; /* 흰색 버튼 텍스트 */
+}
+
+/* 헤더 텍스트 색상 */
+header {
+    color: #000000; /* 검은색 헤더 텍스트 */
+}

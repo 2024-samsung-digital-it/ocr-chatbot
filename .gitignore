@@ -1,0 +1,8 @@
+# ko-sroberta-multitask 폴더 및 그 하위 파일들 제외
+ko-sroberta-multitask/
+
+# Llama-3-Open-Ko-8B-Q8_0.gguf 파일 제외
+Llama-3-Open-Ko-8B-Q8_0.gguf
+
+# __pycache__ 디렉토리 제외
+__pycache__/
