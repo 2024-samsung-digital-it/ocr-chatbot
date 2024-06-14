@@ -1,101 +1,142 @@
-## ÇÁ·ÎÁ§Æ® ¼³¸í
+<div align="center">
+<h2>[2024 ìƒë°˜ê¸° ì‚¼ì„±ì¦ê¶Œ ] ê¸ˆìœµê¶Œ OCR Chatbot ì„œë¹„ìŠ¤</h2>
+ê¸ˆìœµê¶Œì˜ ì—…ë¬´í”„ë¡œì„¸ìŠ¤ ê°œì„ ì„ ìœ„í•œ ì˜¨-í”„ë ˆë¯¸ìŠ¤ í˜•íƒœì˜ ì„œë¹„ìŠ¤ ì…ë‹ˆë‹¤.<br>
+PDFì™€ ì´ë¯¸ì§€ íŒŒì¼ í˜•íƒœì˜ ì¦ê¶Œ ë°ì´í„° ì—…ë¡œë“œê°€ ê°€ëŠ¥í•œ OCR ëª¨ë¸ì„ í™œìš©í•˜ì˜€ìœ¼ë©° ì¸ì‹í•œ ë°ì´í„°ë¥¼ ì¶”ì¶œí•˜ì—¬ ì‚¬ìš©ìì—ê²Œ ì§ˆì˜ì‘ë‹µ ê¸°ëŠ¥ ì œê³µí•©ë‹ˆë‹¤. ğŸ˜Š
+</div>
 
-## ÇÁ·ÎÁ§Æ® ±¸Á¶
+<br>
 
-¸ğµ¨Àº µû·Î ´Ù¿î¹Ş¾Æ¾ßÇÔ.
+## í”„ë¡œì íŠ¸ êµ¬ì¡°
 
 ```markdown
 samsung-digital-it-team2
-¦§¦¡ .chainlit
-¦¢  ¦§¦¡ config.toml
-¦¢  ¦¦¦¡ translations
-¦¢     ¦§¦¡ en-US.json
-¦¢     ¦¦¦¡ ko.json
-¦§¦¡ chainlit.md
-¦§¦¡ chatbot_final.py
-¦§¦¡ Dockerfile
-¦§¦¡ entrypoint.sh
-¦§¦¡ ko-sroberta-multitask
-¦¢  ¦§¦¡ 1_Pooling
-¦¢  ¦¢  ¦¦¦¡ config.json
-¦¢  ¦§¦¡ config.json
-¦¢  ¦§¦¡ config_sentence_transformers.json
-¦¢  ¦§¦¡ model.safetensors
-¦¢  ¦§¦¡ modules.json
-¦¢  ¦§¦¡ README.md
-¦¢  ¦§¦¡ sentence_bert_config.json
-¦¢  ¦§¦¡ special_tokens_map.json
-¦¢  ¦§¦¡ tokenizer.json
-¦¢  ¦§¦¡ tokenizer_config.json
-¦¢  ¦¦¦¡ vocab.txt
-¦§¦¡ Llama-3-Open-Ko-8B-Q8_0.gguf
-¦§¦¡ Modelfile
-¦§¦¡ public
-¦¢  ¦¦¦¡ test.css
-¦§¦¡ requirements.txt
-¦¦¦¡ __pycache__
-   ¦¦¦¡ chatbot_final.cpython-312.pyc
+â”œâ”€ .chainlit
+â”‚  â”œâ”€ config.toml
+â”‚  â””â”€ translations
+â”‚     â”œâ”€ en-US.json
+â”‚     â””â”€ ko.json
+â”œâ”€ chainlit.md
+â”œâ”€ chatbot_final.py
+â”œâ”€ Dockerfile
+â”œâ”€ entrypoint.sh
+â”œâ”€ ko-sroberta-multitask
+â”‚  â”œâ”€ 1_Pooling
+â”‚  â”‚  â””â”€ config.json
+â”‚  â”œâ”€ config.json
+â”‚  â”œâ”€ config_sentence_transformers.json
+â”‚  â”œâ”€ model.safetensors
+â”‚  â”œâ”€ modules.json
+â”‚  â”œâ”€ README.md
+â”‚  â”œâ”€ sentence_bert_config.json
+â”‚  â”œâ”€ special_tokens_map.json
+â”‚  â”œâ”€ tokenizer.json
+â”‚  â”œâ”€ tokenizer_config.json
+â”‚  â””â”€ vocab.txt
+â”œâ”€ Llama-3-Open-Ko-8B-Q8_0.gguf
+â”œâ”€ Modelfile
+â”œâ”€ public
+â”‚  â””â”€ test.css
+â”œâ”€ requirements.txt
+â””â”€ __pycache__
+   â””â”€ chatbot_final.cpython-312.pyc
 ```
 
-## ½ÇÇà¹æ¹ı
+ëª¨ë¸ì€ ìš©ëŸ‰ì´ í¬ê¸°ë•Œë¬¸ì— ë”°ë¡œ ë‹¤ìš´ë°›ì•„ì•¼í•¨.
 
-### 1. ¸ğµ¨ ´Ù¿î·Îµå
 
-**LLM - [Llama-3-Open-Ko-8B-Q8_0]**
+<br>
 
-1. ollama ¼³Ä¡
+
+## RAG ëª¨ë¸ í™œìš© ë° íŒŒì´í”„ë¼ì¸
+#### 1. ì‚¬ìš©ìì˜ PDF íŒŒì¼ì„ vectorDBì— ë„£ê¸° ìœ„í•´ ìë¥´ëŠ” ì‘ì—… 
+#### 2. embedding model : ko-sroberta-multitask
+- í•œêµ­ì–´ ë¬¸ì¥ ì„ë² ë”©ì— í™œìš©í•˜ê¸° ìœ„í•´ ë§Œë“¤ì–´ì§„ í•œêµ­ì–´ ì‚¬ì „í•™ìŠµ ëª¨ë¸
+- ì½”ì‚¬ì¸ ìœ ì‚¬ë„ ì´ìš©
+#### 3. MultiQueryRAG & ParentDocumentRAG í™œìš©
+- ë©€í‹° ì¿¼ë¦¬ë¡œ ì§ˆë¬¸ì„ 3ê°œë¡œ êµ¬ë¶„ â†’ ë¬¸ì„œ 3ê°œ ë°œê²¬ (chunk_size=128)
+- ì‚¬ìš©ìì—ê²Œ ë°›ì€ ì¿¼ë¦¬ì—ì„œ ê°€ì¥ ìœ ì‚¬í•œ ë¬¸ì„œ ì°¾ê³  í•´ë‹¹ ë¬¸ì„œì˜ ë¶€ëª¨ ë¬¸ì„œ ì°¾ê¸°(ì´ë•Œ ë¶€ëª¨ ë¬¸ì„œì˜ chunk_size=512)
+- ê²°ê³¼ì ìœ¼ë¡œ ì´ 9ê°œì˜ ë¬¸ì„œê°€ ì¡´ì¬ (3x3)
+#### 4.llm mode : Llama-3-Open-Ko-8B-Q8_0
+
+```
+ê²°ë¡  : Llama3 ëª¨ë¸ì´ (chunk_size=150, chunk_overlap=40)ì¼ ë•Œ ì œì¼ ë¹ ë¥¸ ì„±ëŠ¥ì„ ë³´ì„
+```
+
+<br>
+
+<img width="700" alt="á„‰á…³á„á…³á„…á…µá†«á„‰á…£á†º 2024-06-14 á„‹á…©á„’á…® 4 09 27" src="https://github.com/2024-samsung-digital-it/ocr-chatbot/assets/101869611/51c6e7f6-6f6a-4266-8782-0be4eebc000b">
+
+
+## ì„œë¹„ìŠ¤ ì‹¤í–‰ ë°©ë²•
+
+### 1. ëª¨ë¸ ë‹¤ìš´ë¡œë“œ
+> <mark>**LLM - [Llama-3-Open-Ko-8B-Q8_0]**</mark>
+
+1. ollama ì„¤ì¹˜
     
     https://ollama.com/
     
-2. Çã±ëÆäÀÌ½º¿¡¼­ Llama-3-Open-Ko-8B-Q8_0.gguf ´Ù¿î·Îµå
+2. í—ˆê¹…í˜ì´ìŠ¤ì—ì„œ Llama-3-Open-Ko-8B-Q8_0.gguf ë‹¤ìš´ë¡œë“œ
     
     https://huggingface.co/teddylee777/Llama-3-Open-Ko-8B-gguf/tree/main
     
-3. Modelfile ÀÛ¼º
-4. ¸ğµ¨ »ı¼º
+3. Modelfile ì‘ì„±
+4. ëª¨ë¸ ìƒì„±
 `ollama create Llama-3-Open-Ko-8B-Q8_0 -f Modelfile`
-    - ÀÌ¶§ ¸ğµ¨ ÆÄÀÏ°ú gguf ÆÄÀÏÀº °°ÀºÀ§Ä¡
+    - ì´ë•Œ ëª¨ë¸ íŒŒì¼ê³¼ gguf íŒŒì¼ì€ ê°™ì€ìœ„ì¹˜
 
-**Eembedding - [ko-sroberta-multitask]**
+<br>
+
+> <mark>**Embedding - [ko-sroberta-multitask]**</mark>
 
 https://huggingface.co/jhgan/ko-sroberta-multitask
 
-ÇØ´ç ¸µÅ©¿¡¼­ `ko-sroberta-multitask` ¸ğµ¨ ´Ù¿î·Îµå
+í•´ë‹¹ ë§í¬ì—ì„œ `ko-sroberta-multitask` ëª¨ë¸ ë‹¤ìš´ë¡œë“œ
 
 ```
 ko-sroberta-multitask
-  ¦§¦¡ 1_Pooling
-  ¦¢  ¦¦¦¡ config.json
-  ¦§¦¡ config.json
-  ¦§¦¡ config_sentence_transformers.json
-  ¦§¦¡ model.safetensors
-  ¦§¦¡ modules.json
-  ¦§¦¡ README.md
-  ¦§¦¡ sentence_bert_config.json
-  ¦§¦¡ special_tokens_map.json
-  ¦§¦¡ tokenizer.json
-  ¦§¦¡ tokenizer_config.json
-  ¦¦¦¡ vocab.txt
+  â”œâ”€ 1_Pooling
+  â”‚  â””â”€ config.json
+  â”œâ”€ config.json
+  â”œâ”€ config_sentence_transformers.json
+  â”œâ”€ model.safetensors
+  â”œâ”€ modules.json
+  â”œâ”€ README.md
+  â”œâ”€ sentence_bert_config.json
+  â”œâ”€ special_tokens_map.json
+  â”œâ”€ tokenizer.json
+  â”œâ”€ tokenizer_config.json
+  â””â”€ vocab.txt
 ```
 
-### 2. docker ½ÇÇà
+<br>
 
-1. µµÄ¿ ÀÌ¹ÌÁö ºôµå
+### 2. docker ì‹¤í–‰
+
+1. ë„ì»¤ ì´ë¯¸ì§€ ë¹Œë“œ
     
-    ÇÁ·ÎÁ§Æ® Æú´õ°¡ ÀÖ´Â À§Ä¡·Î ÀÌµ¿ÇØ¼­ ´ÙÀ½ ¸í·É¾î ½Ç
+    í”„ë¡œì íŠ¸ í´ë”ê°€ ìˆëŠ” ìœ„ì¹˜ë¡œ ì´ë™í•´ì„œ ë‹¤ìŒ ëª…ë ¹ì–´ ì‹¤
     
     `docker build -t chatbot:latest .`
     
-2. µµÄ¿ ÄÁÅ×ÀÌ³Ê ½ÇÇà
+2. ë„ì»¤ ì»¨í…Œì´ë„ˆ ì‹¤í–‰
     
     `docker run chatbot`
-    
 
-### 3. ·ÎÄÃ È¯°æ¿¡¼­ ½ÇÇà
+<br>
 
-ÇÊ¿äÇÑ ÆĞÅ°Áö ¼³Ä¡ ÈÄ ¸í·É¾î ½ÇÇà (°¡»ó È¯°æ ±ÇÀå)
+### 3. ë¡œì»¬ í™˜ê²½ì—ì„œ ì‹¤í–‰
+
+í•„ìš”í•œ íŒ¨í‚¤ì§€ ì„¤ì¹˜ í›„ ëª…ë ¹ì–´ ì‹¤í–‰ (ê°€ìƒ í™˜ê²½ ê¶Œì¥)
 
 `chainlit run chatbot_final.py`
 
-## ½Ã¿¬ ¿µ»ó ¹× ÀÌ¹ÌÁö (¿µ»ó + PPT »çÁø Âü°í)
-![alt text](<½Ã¿¬¿µ»ó ÃÖÁ¾.gif>)
+<br>
+
+
+## ì‹œì—° ì˜ìƒ ë° ì´ë¯¸ì§€
+<img width="535" alt="á„‰á…³á„á…³á„…á…µá†«á„‰á…£á†º 2024-06-14 á„‹á…©á„’á…® 4 41 36" src="https://github.com/2024-samsung-digital-it/ocr-chatbot/assets/101869611/929e7659-0881-4e58-9eaf-294663278e86">
+
+![alt text](<ì‹œì—°ì˜ìƒ ìµœì¢….gif>)
+
+
