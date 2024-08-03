@@ -63,8 +63,8 @@ samsung-digital-it-team2
 ```
 
 <br>
+<img width="600" alt="구조" src="https://github.com/user-attachments/assets/1e4d7da0-2fca-474b-9d17-45657cbd8e25">
 
-<img width="700" alt="스크린샷 2024-06-14 오후 4 09 27" src="https://github.com/2024-samsung-digital-it/ocr-chatbot/assets/101869611/51c6e7f6-6f6a-4266-8782-0be4eebc000b">
 
 
 ## 서비스 실행 방법
